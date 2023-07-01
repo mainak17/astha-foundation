@@ -1,0 +1,35 @@
+[
+    {
+        "EventID": 1,
+        "EventName": "Project A",
+        "Objective": "To raise awareness for a social cause",
+        "Description": "Organizing a charity event to raise funds and create awareness for a specific social cause.",
+        "EventDate": "2023-03-10",
+        "Status": "ongoing",
+        "Budget": 5000,
+        "ManagerID": 1,
+        "Location": "City A"
+    },
+    {
+        "EventID": 2,
+        "EventName": "Project B",
+        "Objective": "To promote environmental sustainability",
+        "Description": "Hosting an environmental conference to educate people about sustainable practices.",
+        "EventDate": "2023-05-20",
+        "Status": "completed",
+        "Budget": 3000,
+        "ManagerID": 2,
+        "Location": "City B"
+    },
+    {
+        "EventID": 3,
+        "EventName": "Project C",
+        "Objective": "To support underprivileged children",
+        "Description": "Organizing a charity carnival to raise funds for underprivileged children and provide them with educational resources.",
+        "EventDate": "2023-07-15",
+        "Status": "on hold",
+        "Budget": 7000,
+        "ManagerID": 3,
+        "Location": "City C"
+    }
+]

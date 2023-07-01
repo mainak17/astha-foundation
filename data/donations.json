@@ -1,0 +1,32 @@
+[
+    {
+        "DonationID": 1,
+        "DonorName": "John Doe",
+        "DonationType": "Regular",
+        "IsMember": true,
+        "DonationDate": "2023-01-15",
+        "Amount": 100,
+        "DonatedTo": "Person A",
+        "DonatedFor": "Event X"
+    },
+    {
+        "DonationID": 2,
+        "DonorName": "Jane Smith",
+        "DonationType": "OneTime",
+        "IsMember": false,
+        "DonationDate": "2022-11-30",
+        "Amount": 50,
+        "DonatedTo": null,
+        "DonatedFor": "Event Y"
+    },
+    {
+        "DonationID": 3,
+        "DonorName": "Bob Johnson",
+        "DonationType": "Regular",
+        "IsMember": true,
+        "DonationDate": "2023-02-28",
+        "Amount": 200,
+        "DonatedTo": "Person B",
+        "DonatedFor": null
+    }
+]
