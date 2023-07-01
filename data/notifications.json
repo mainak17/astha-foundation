@@ -6,7 +6,7 @@
         "Subject": "Inquiry about volunteering opportunities",
         "Message": "Hello, I'm interested in volunteering for your organization. Can you please provide me with more information about the available opportunities?",
         "Timestamp": "2023-06-15 10:30:00",
-        "Status": "unread"
+        "IsRead": false
     },
     {
         "NotificationID": 2,
@@ -15,7 +15,7 @@
         "Subject": "Donation query",
         "Message": "Hi, I would like to know the process for making a donation to support your cause. Could you please provide me with the necessary details?",
         "Timestamp": "2023-06-20 14:45:00",
-        "Status": "read"
+        "IsRead": true
     },
     {
         "NotificationID": 3,
@@ -24,6 +24,6 @@
         "Subject": "Event participation inquiry",
         "Message": "Good day! I heard about your upcoming event and I'm interested in participating. Can you please provide me with the event details and registration process?",
         "Timestamp": "2023-06-25 09:15:00",
-        "Status": "unread"
+        "IsRead": false
     }
 ]

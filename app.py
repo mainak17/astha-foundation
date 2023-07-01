@@ -4,7 +4,7 @@ from utils import ReadJsonFile
 app = Flask(__name__)
 
 notification_data = ReadJsonFile.get_notifications('data/notifications.json')
-unread_count = sum(1 for notification in notification_data if  notification["Status"]=="unread")
+unread_count = sum(1 for notification in notification_data if not notification["IsRead"])
 notifications = {"data":notification_data,"UnreadCount":unread_count}
 
 @app.route('/')
