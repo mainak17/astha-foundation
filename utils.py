@@ -21,3 +21,13 @@ class ReadJsonFile:
             data = json.load(json_file)
         return data
     
+    @staticmethod
+    def get_event_names(file_path):
+        event_list = []
+        with open(file_path, 'r') as json_file:
+            data = json.load(json_file)
+        for event in data:
+            if event['Status'] !='completed':
+                event_list.append(event['EventName'])
+        return event_list
+    

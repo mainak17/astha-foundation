@@ -7,6 +7,9 @@ notification_data = ReadJsonFile.get_notifications('data/notifications.json')
 unread_count = sum(1 for notification in notification_data if not notification["IsRead"])
 notifications = {"data":notification_data,"UnreadCount":unread_count}
 
+event_list = ReadJsonFile.get_event_names('data/events.json')
+
+
 @app.route('/')
 def index():
     return render_template('index.html',notifications=notifications)
@@ -27,7 +30,7 @@ def donations():
     keys = ReadJsonFile.get_keys('data/donations.json')
     content = {"type":"Donations","body":data,"keys":keys}
 
-    return render_template('content.html',content=content,notifications=notifications)
+    return render_template('content.html',content=content,notifications=notifications,event_list=event_list)
 
 @app.route('/events')
 def events():

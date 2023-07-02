@@ -5,7 +5,7 @@
         "Objective": "To raise awareness for a social cause",
         "Description": "Organizing a charity event to raise funds and create awareness for a specific social cause.",
         "EventDate": "2023-03-10",
-        "Status": "ongoing",
+        "Status": "upcoming",
         "Budget": 5000,
         "ManagerID": 1,
         "Location": "City A"
@@ -27,7 +27,7 @@
         "Objective": "To support underprivileged children",
         "Description": "Organizing a charity carnival to raise funds for underprivileged children and provide them with educational resources.",
         "EventDate": "2023-07-15",
-        "Status": "on hold",
+        "Status": "upcoming",
         "Budget": 7000,
         "ManagerID": 3,
         "Location": "City C"
