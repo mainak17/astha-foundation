@@ -14,26 +14,31 @@
 <!-- Modal Body -->
 <div class="modal-body">
     <form>
-        {% for key in content['keys'] %}
+        <!-- {% for key in content['keys'] %}
             <div class="form-group">
                 <label for="{{ key }}">{{ key }}</label>
                 <input type="text" class="form-control" id="{{ key }}" name="{{ key }}">
             </div>
+        {% endfor %} -->
+
+
+        {% for key in content['keys'] %}
+            <div class="form-group">
+                <label for="{{ key }}">{{ key }}</label>
+
+        {% if 'date' in key.lower() %}
+            <input type="date" class="form-control" id="{{ key }}" name="{{ key }}">
+            {% elif 'status' in key.lower() %}
+                <select class="form-control" id="{{ key }}" name="{{ key }}">
+                    <option value="active">Active</option>
+                    <option value="inactive">Inactive</option>
+                </select>
+            {% else %}
+            <input type="text" class="form-control" id="{{ key }}" name="{{ key }}">
+        {% endif %}
+    </div>
         {% endfor %}
 
-
-      
-      <div class="form-group">
-        <label for="joinDate">Join Date</label>
-        <input type="date" class="form-control" id="joinDate" name="joinDate">
-      </div>
-      <div class="form-group">
-        <label for="activeStatus">Active Status</label>
-        <select class="form-control" id="activeStatus" name="activeStatus">
-          <option value="active">Active</option>
-          <option value="inactive">Inactive</option>
-        </select>
-      </div>
     </form>
   </div>
   
