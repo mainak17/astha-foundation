@@ -27,9 +27,18 @@
 
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
-                        <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">{{content.type}} Table Example</h6>
+                        <div class="card-header py-3 d-flex justify-content-between align-items-center">
+                        <h6 class="m-0 font-weight-bold text-primary">{{content.type}} Table Example</h6>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Add New {{content.type}}</button>
                         </div>
+                    
+                        <!-- Modal Body -->
+                        {% include 'modal.html' %}
+                    
+                        <!-- Modal End -->
+                    <!-- </div> -->
+  
+
                         <div class="card-body">
                             <div class="table-responsive">
                                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
