@@ -29,11 +29,11 @@
                     <div class="card shadow mb-4">
                         <div class="card-header py-3 d-flex justify-content-between align-items-center">
                         <h6 class="m-0 font-weight-bold text-primary">{{content.type}} Table Example</h6>
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#donationsModal">Add New {{content.type}}</button>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#donationsModalNew">Add New {{content.type}}</button>
                         </div>
                     
                         <!-- Modal Body -->
-                        {% include 'donations-modal.html' %}
+                        {% include 'donations-modal-new.html' %}
                     
                         <!-- Modal End -->
                     <!-- </div> -->
@@ -47,6 +47,7 @@
                                             {% for key in content['keys'] %}
                                                 <td>{{ key }}</td>
                                             {% endfor %}
+                                            <td>Modify</td>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -55,10 +56,18 @@
                                             {% for key, value in record.items() %}
                                                 <td>{{ value }}</td>
                                             {% endfor %}
+
+                                            <td>
+                                                <button type="button" class="btn btn-primary btn-circle btn-sm" data-toggle="modal" data-target="#donationsModalEdit{{record['DonationID']}}"><i class="fas fa-edit"></i></button>
+                                                <a href="{{ url_for('delete_donation', donation_id=record['DonationID']) }}" class="btn btn-danger btn-circle btn-sm"><i class="fas fa-trash"></i></a>
+
+                                            </td>
                                         </tr>
                                         {% endfor %}
                                     </tbody>
                                 </table>
+                            <!-- Modal To Edit -->
+                            {% include 'donations-modal-edit.html' %}
                             </div>
                         </div>
                     </div>

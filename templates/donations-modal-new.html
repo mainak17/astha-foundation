@@ -1,0 +1,73 @@
+ 
+  <!-- Modal -->
+  <div class="modal fade" id="donationsModalNew" tabindex="-1" role="dialog" aria-labelledby="donationsModalNewLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h5 class="modal-title" id="donationsModalNewLabel">Add New Donation</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+  
+<!-- Modal Body -->
+<div class="modal-body">
+    <form>
+
+      <div class="form-group">
+        <label for="DonorName">DonorName</label>
+        <input type="text" class="form-control" id="DonorName" name="DonorName">
+    </div>
+    <div class="form-group">
+      <label for="DonationType">DonationType</label>
+      <input type="text" class="form-control" id="DonationType" name="DonationType">
+    </div>
+    <div class="form-group">
+      <label for="IsMember">IsMember</label>
+      <select class="form-control" id="IsMember" name="IsMember">
+        <option value="true">Yes</option>
+        <option value="false">No</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="DonationDate">DonationDate</label>
+      <input type="date" class="form-control" id="DonationDate" name="DonationDate">
+    </div>
+    <div class="form-group">
+      <label for="Amount">Amount</label>
+      <input type="number" class="form-control" id="Amount" name="Amount">
+    </div>
+    <div class="form-group">
+      <label for="DonorName">DonatedTo</label>
+      <!-- <input type="text" class="form-control" id="DonatedTo" name="DonatedTo"> -->
+      <select class="form-control" id="DonatedTo" name="DonatedTo" required>
+        <option value=0 selected disabled>-Select-</option>
+        <option value="Atanu Roy">Atanu Roy</option>
+        <option value="Satyabrata Roy">Satyabrata Roy</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="DonatedFor">DonatedFor</label>
+      <select class="form-control" id="DonatedFor" name="DonatedFor" required>
+      <option value=0 selected disabled>-Select-</option>
+      <option value="general">General</option>
+      {% for event in event_list%}
+        <option value="{{event}}">{{event}}</option>
+      {% endfor %}
+    </select>
+    </div>
+
+    </form>
+  </div>
+  
+  
+        <!-- Modal Footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  

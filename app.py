@@ -41,6 +41,16 @@ def events():
 
     return render_template('content.html',content=content,notifications=notifications)
 
+@app.route('/donations/delete/<donation_id>')
+def delete_donation(donation_id):
+    # Logic to delete the donation with the given donation_id
+    return "Donation deleted successfully"
+
+@app.route('/donations/submit/<donation_id>')
+def submit_donation(donation_id):
+    # Logic to delete the donation with the given donation_id
+    return "Donation submitted successfully"
+
 
 if __name__ == '__main__':
     app.run(debug=True)
