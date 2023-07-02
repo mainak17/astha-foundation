@@ -30,7 +30,12 @@ def donations():
     keys = ReadJsonFile.get_keys('data/donations.json')
     content = {"type":"Donations","body":data,"keys":keys}
 
-    return render_template('content.html',content=content,notifications=notifications,event_list=event_list)
+    earnings = [ {'type' : 'Today','amount' : 10000}, 
+                {'type' : 'This Week','amount' : 20000},
+                {'type' : 'This Month','amount' : 23000}, 
+                {'type' : 'This Quarter','amount' : 45000}]
+
+    return render_template('content.html',content=content,notifications=notifications,event_list=event_list,earnings=earnings)
 
 @app.route('/events')
 def events():
